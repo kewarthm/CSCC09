@@ -5,7 +5,9 @@
     <title>Microblog</title>
     <link href="style/main.css" rel="stylesheet" type="text/css"/>
     <link href="style/form.css" rel="stylesheet" type="text/css"/>
+    <link href="style/messages.css" rel="stylesheet" type="text/css"/>
 </head>
+
 <body>
     <header>
         <a href="/" id="title">Microblog</a>
@@ -15,9 +17,29 @@
     <form class="complex_form" id="create_message_form">
       <div class="form_title">Post a message</div>
       <input type="text" class="form_element" placeholder="Enter your name" name="user_name" required/>
+      <textarea class="form_element" name="msg" placeholder="Enter your message here" rows=3 required></textarea>
+
+      <input type="submit" class="btn" id="msg_button"value="Post Your Message"></input>
     </form>
     
     <div id="messages">
+      
+
+      <ul class="flex-container">
+        <li class="flex-profile"><img src="media/user.png"></img></li>
+        <!<li class="flex-msg"Hello world!</li>
+        <li class="flex-upvote">0</li>
+        <li class="flex-downvote">0</li>
+        <li class="flex-del"></li>
+      </ul>
+      <ul class="flex-container">
+        <li class="flex-profile"><img src="media/user.png"></img></li>
+        <!<li class="flex-msg"Hello world!</li>
+        <li class="flex-upvote">0</li>
+        <li class="flex-downvote">0</li>
+        <li class="flex-del"></li>
+      </ul>
+
     </div>
     
     <footer>
