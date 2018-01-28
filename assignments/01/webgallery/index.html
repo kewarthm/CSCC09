@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Assignment 1</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css"/>
+    <link href="style/form.css" rel="stylesheet" type="text/css"/>
+    <link href="style/messages.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+        <a href="/" id="title">Assignment 1</a>
+    </header>
+    <img id="curr_img" src=""></img>
+    <form class="btn_bar">
+        <button id="prev" type="button" class="btn">Prev</button>
+        <p id="img_title" class="bar_title">Something went terribly wrong, so here's a cat</p>
+        <button id="next" type="button" class="btn">Next</button>
+    </form>
+    <form class="complex_form" id="submit_img_form">
+        <div class="form_title">Submit a picture</div>
+        <input type="text" id="post_title" class="form_element" placeholder="Enter your image's title here" name="pic_title" required/>
+        <input type="text" id="post_auth" class="form_element" placeholder="Enter your name" name="Author" required/>
+        <textarea rows="2" id="post_url" class="form_element" placeholder="Picture URL" name="pic_url" required></textarea>
+        <button type="submit" id="pic_submit" class="btn">Add your image to the gallery</button>
+    </form>
+    
+    <button type="button" id="form_hide" class="btn" >Hide</button>
+    
+    <form class="complex_form" id="submit_comment_form">
+        <div class="form_title">Comment on the image</div>
+        <input type="text" id="comment_auth" class="form_element" placeholder="Enter your name" name="user_name" required/>
+        <textarea rows="3" id="comment_content" class="form_element" placeholder="Comment here" name="content" required></textarea>
+        <button type="submit" id="pic_submit" class="btn">Add your image to the gallery</button>
+    </form>
+    <div id="comments" class="#messages"></div>
+    <form class="btn_bar">
+        <button id="c_prev" type="button" class="btn">Prev</button>
+        <button id="c_next" type="button" class="btn">Next</button>
+    </form>
+    <footer>
+        <a href='credits.html'>credits</a>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
