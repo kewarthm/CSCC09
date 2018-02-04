@@ -4,16 +4,23 @@
   lab: 
       title: HTML & CSS
       handout: ../labs/02/
+      rubric: https://grademy.work/rubric?id=C09S18-L1
     
 - week:
   lab:
       title: Javascript
+      handout: ../labs/03/
+      rubric: https://grademy.work/rubric?id=C09S18-L3
   hw:
-      title: HTML & CSS
+      title: Frontend
+      handout: ../assignments/01/
+      rubric: https://grademy.work/rubric?id=C09S18-A1
     
 - week:
   lab: 
       title: Web API
+      handout: ../labs/04/
+      rubric: https://grademy.work/rubric?id=C09S18-L4
     
 - week: 
   lab: 
@@ -30,6 +37,7 @@
       title: Managing Users
   project: 
       title: Proposal
+      handout: ../project/
     
 - week: 
   lab: 
@@ -38,12 +46,14 @@
 - week:
     
 - week:
+  project: 
+    title: Beta Version
+    
+- week:
     
 - week:
   project: 
-      title: Beta Version
-    
-- week:
+    title: Final version
     
 - week:
   project: 

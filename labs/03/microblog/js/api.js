@@ -15,9 +15,13 @@ var api = (function(){
     // return a message object
     module.addMessage = function(author, content){
         // store data here
+<<<<<<< HEAD
         var msg = {author: author, content: content}
         localStorage.setItem(1, JSON.stringify(msg)); 
         return msg
+=======
+        return {author: author, content: content}
+>>>>>>> refs/remotes/ThierrySans/master
     }
     
     // delete a message given its messageId
@@ -45,4 +49,8 @@ var api = (function(){
     }
     
     return module;
+<<<<<<< HEAD
 })();
+=======
+})();
+>>>>>>> refs/remotes/ThierrySans/master
