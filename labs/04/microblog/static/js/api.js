@@ -17,6 +17,15 @@ var api = (function(){
     
     ****************************** */ 
     
+    module.getMessage(messageId){
+        var data = JSON.parse(localStorage.getItem('microblog'));
+        var m = undefined;
+        for(var i=0; i < data.messages.length; i++){
+            if(data.messages[i].id == messageId) m = data.messages[i];
+        }
+        return m;
+    }
+
     module.addMessage = function(author, content){
         var data = JSON.parse(localStorage.getItem('microblog'));
         var message = {id: data.next++, author: author, content: content, upvote: 0, downvote: 0};

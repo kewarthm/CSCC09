@@ -17,9 +17,43 @@ app.post('/api/messages/', function (req, res, next) {
     var auth = req.body.author;
     var content = req.body.content;
     var m = api.addMessage(auth, content);
-    var ret = {"id": m.id};
     
+    res.json(m);
+});
+
+app.get('/api/messages/', function (req, res, next) {
+    var ret = api.getMessages();
     res.json(ret);
+});
+
+app.get('/api/messages/:id', function (req, res, next) {
+    var id = req.params.id;
+    var ret = api.getMessage(id);
+    if(ret === undefined) res.status(404).end("message :" + id + " does not exist");
+    res.json(ret);
+});
+
+app.delete('/api/messages/:id', function (req, res, next){
+    var id = req.params.id;
+    var m = api.deleteMessage(id);
+    if(m == null) return res.status(404).end("message :" + id + " does not exist");
+    else{
+        res.json(m);
+    }
+});
+
+app.patch('/api/messages/:id', function (req, res, next) {
+    var action = req.body.action;
+    var id = req.params.id;
+    if(action == 'upvote'){
+        var m = api.upvoteMessage(id);
+        if (m === undefined) return res.status(404).end("message :" + id + " does not exist");
+    }
+    else if(action = 'downvote'){
+        var m = api.downvoteMessage(id);
+        if (m === undefined) return res.status(404).end("message :" + id + " does not exist");
+    }
+    else return res.status(204).end("body: invalid argument");
 });
 
 app.use(function (req, res, next){
